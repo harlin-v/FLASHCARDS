@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rubik+Doodle+Shadow&display=swap');
+/* Empezaremos añadiendole algo de margen a todos los elemnetos de nuestro html */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Indie Flower";
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+header{
+    background-color: white;
+}
+
+button{
+    font-family: "Indie flower";
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+button:hover{
+    background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.contenedor{
+    /* border: 1px solid; */
+    width: 95%;
+    margin: auto;
+}
+
+.navegar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.navegar button{
+    font-family: inherit;
+}
+
+.crearCaja{
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+    /* background-color: whitesmoke; */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.crearCaja textarea{
+    width: 100%;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid lightgray;
+}
+
+.crearCaja button{
+    width: fit-content;
+}
+
+/* El atributo "flex-wrap" hace que las targetas que se van creando se organicen unas al lado de otras o en su defecto, unas
+debajo de otras. De esta manera se mantienen dentro del elemento y son responsivas.*/
+.targetas{
+    display: auto;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+/* El atributo "word-wrap" hace que las palabras en el area de texto se corten al final del borde y pasen a otra linea*/
+.targetas{
+    width: 350px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px;
+    /* background-color: white; */
+    box-shadow: 0 2px 4 0 rgba(0, 0, 0, 0.5);
+}
+
+.targetas h2{
+    font-size: 1rem;
+}
+
+
+@media(max-width: 768px){
+    .targetas{
+        margin: auto;
+    }
+
+    .targetas{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 480px){
+    .navegar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .crearCaja{
+        width: 100%;
+    }
+
+    .targetas{
+        width: 100%;
+    }
+}

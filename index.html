@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FLASH CARDS</title>
+</head>
+<body>
+    
+    <!-- En este bloque de codigo estamos haciendo uso de la etiqueta header, la cual es muy util para presentar elementos
+    de la pagina como un menu. 
+    adicionalmente, dentro de nuestro contenedor estamos definiendo una clase navegar que contiene un titulo y dos botones -->
+    <header>
+        <div class="contenedor">
+            <div class="navegar">
+                <h1>Flashcards</h1>
+                <div>
+                    <button onclick="mostrarCrearTargeta()">Nueva Flashcards</button>
+                    <button onclick="borrarTargeta()">Borrar Flashcards</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- En este contenedor estaran las targetas que se iran creando o borrando. -->
+    <div class="contenedor">
+
+        <div class="crearCaja">
+            <h1 style="text-align: center; color: black;">Crear Flashcard</h1>
+            <label for="pregunta">Pregunta:</label>
+
+            <!-- Como notaras en esta linea de codigo, no estoy utilizando input ya que el proposito es darle al usuario
+            mas espacio para escribir sobre la flashcard. Notaras que generalmente al utilizar una etiqueta "label" la rela
+            cionamos con una caja de texto o con un "textarea" utilizando "for" y un "id". -->
+            <textarea  id="pregunta"></textarea>
+            <br>
+            <label for="respuesta" >Respuesta:</label>
+            <!-- Notaras que en esta linea de codigo estoy utilizando la clase "maxlength". esta nos permite limitar el numero
+            de caracteres que el usuario puede escribir en el area de texto. -->
+            <textarea id="respuesta" maxlength="9" ></textarea>
+            <br>
+
+            <div>
+                <button onclick="agregarTargeta()">Guardar</button>
+                <button onclick="esconderCrearCaja()">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Las targetas que van a deplegarse en este espacio, seran agregadas dinamicamente desde javascript. -->
+        <div class="targetas">
+            <h2></h2>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
